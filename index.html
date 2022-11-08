@@ -4,9 +4,277 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Apresentação - Front</title>
+    <link href="./CSS/Bootstrap/buttonSassCompilado.css" rel="stylesheet" />
     <link href="./CSS/Bootstrap/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./CSS/Highlight/styles/default.min.css" />
+
+    <script src="./CSS/Highlight/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </head>
   <body>
+    <div class="position-absolute top-0 start-0">
+      <button
+        class="button-sass"
+        data-bs-toggle="modal"
+        href="#exampleModalToggle"
+        role="button"
+      >
+        SASS
+      </button>
+
+      <div
+        class="modal fade"
+        id="exampleModalToggle"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">CSS</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <pre><code class="CSS">
+                    .button-sass {
+                      font-size: 18px;
+                      letter-spacing: 2px;
+                      text-transform: uppercase;
+                      display: inline-block;
+                      text-align: center;
+                      font-weight: bold;
+                      padding: 0.7em 2em;
+                      border: 3px solid #e30075;
+                      border-radius: 2px;
+                      position: relative;
+                      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+                      color: #e30075;
+                      text-decoration: none;
+                      transition: 0.3s ease all;
+                      z-index: 1;
+                    }
+                    .button-sass:before {
+                      transition: 0.5s all ease;
+                      position: absolute;
+                      top: 0;
+                      left: 50%;
+                      right: 50%;
+                      bottom: 0;
+                      opacity: 0;
+                      content: "";
+                      background-color: #e30075;
+                      z-index: -1;
+                    }
+                    .button-sass:hover, .button-sass:focus {
+                      color: #f2f2f2;
+                    }
+                    .button-sass:hover:before, .button-sass:focus:before {
+                      transition: 0.5s all ease;
+                      left: 0;
+                      right: 0;
+                      opacity: 1;
+                    }
+                    .button-sass:active {
+                      transform: scale(0.9);
+                    }
+                    
+                    /*# sourceMappingURL=buttonSassCompilado.css.map */
+                    
+                  </code></pre>
+            </div>
+            <div class="modal-footer">
+              <button
+                class="btn btn-primary"
+                data-bs-target="#exampleModalToggle2"
+                data-bs-toggle="modal"
+              >
+                Ir para o SCSS
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="exampleModalToggle2"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+                SCSS
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <pre><code class="SCSS">
+                    $prime: #e30075;
+                    $second: #f2f2f2;
+
+                    .button-sass {
+                      font-size: 18px;
+                      letter-spacing: 2px;
+                      text-transform: uppercase;
+                      display: inline-block;
+                      text-align: center;
+                      font-weight: bold;
+                      padding: 0.7em 2em;
+                      border: 3px solid $prime;
+                      border-radius: 2px;
+                      position: relative;
+                      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+                      color: $prime;
+                      text-decoration: none;
+                      transition: 0.3s ease all;
+                      z-index: 1;
+
+                      &:before {
+                        transition: 0.5s all ease;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        right: 50%;
+                        bottom: 0;
+                        opacity: 0;
+                        content: '';
+                        background-color: $prime;
+                        z-index: -1;
+                      }
+                      &:hover,
+                      &:focus {
+                        color: $second;
+                      }
+                      &:hover:before,
+                      &:focus:before {
+                        transition: 0.5s all ease;
+                        left: 0;
+                        right: 0;
+                        opacity: 1;
+                      }
+                      &:active {
+                        transform: scale(0.9);
+                      }
+                    }
+              </code></pre>
+            </div>
+            <div class="modal-footer">
+              <button
+                class="btn btn-primary"
+                data-bs-target="#exampleModalToggle"
+                data-bs-toggle="modal"
+              >
+                Voltar para o CSS
+              </button>
+
+              <button
+                class="btn btn-primary"
+                data-bs-target="#exampleModalToggle3"
+                data-bs-toggle="modal"
+              >
+                Ir para o SASS
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="exampleModalToggle3"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel3"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">
+                SASS
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <pre><code class="SASS">
+                  $prime: #e30075
+                  $second: #f2f2f2
+
+                  .button-sass
+                    font-size: 18px
+                    letter-spacing: 2px
+                    text-transform: uppercase
+                    display: inline-block
+                    text-align: center
+                    font-weight: bold
+                    padding: 0.7em 2em
+                    border: 3px solid $prime
+                    border-radius: 2px
+                    position: relative
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1)
+                    color: $prime
+                    text-decoration: none
+                    transition: 0.3s ease all
+                    z-index: 1
+
+                    &:before
+                      transition: 0.5s all ease
+                      position: absolute
+                      top: 0
+                      left: 50%
+                      right: 50%
+                      bottom: 0
+                      opacity: 0
+                      content: ''
+                      background-color: $prime
+                      z-index: -1
+
+                    &:hover, &:focus
+                      color: $second
+
+                    &:hover:before, &:focus:before
+                      transition: 0.5s all ease
+                      left: 0
+                      right: 0
+                      opacity: 1
+
+                    &:active
+                      transform: scale(0.9)
+              </code></pre>
+            </div>
+            <div class="modal-footer">
+              <button
+                class="btn btn-primary"
+                data-bs-target="#exampleModalToggle2"
+                data-bs-toggle="modal"
+              >
+                Retornar para o SCSS
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container-sm text-center">
       <img
         class="logo img-fluid"
@@ -16,11 +284,12 @@
 
       <div class="row">
         <div class="col">
-          <a href="./tailwind.html"><img
-            class="tw img-fluid logo-principal-fw"
-            src="./IMG/tailwind.png"
-            alt="Logo do tailwind"
-          /></a> 
+          <a href="./tailwind.html"
+            ><img
+              class="tw img-fluid logo-principal-fw"
+              src="./IMG/tailwind.png"
+              alt="Logo do tailwind"
+          /></a>
         </div>
 
         <div class="col bt position-relative">
@@ -70,7 +339,7 @@
                     class="text-center modal-title fs-5"
                     id="exampleModalLabel"
                   >
-                    Título do modal
+                    Título do modal - Bootstrap
                   </h1>
                   <button
                     type="button"
@@ -269,40 +538,98 @@
                     <span class="visually-hidden">Loading...</span>
                   </div>
 
-                  <h3 style="margin-bottom: 100px;">Accordion</h3>
-                  <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <h3 style="margin-bottom: 100px">Accordion</h3>
+                  <div
+                    class="accordion accordion-flush"
+                    id="accordionFlushExample"
+                  >
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseOne"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseOne"
+                        >
                           Accordion 1
                         </button>
                       </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                      <div
+                        id="flush-collapseOne"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample"
+                      >
+                        <div class="accordion-body">
+                          Placeholder content for this accordion, which is
+                          intended to demonstrate the
+                          <code>.accordion-flush</code> class. This is the first
+                          item's accordion body.
+                        </div>
                       </div>
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseTwo"
+                        >
                           Accordion 2
                         </button>
                       </h2>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                      <div
+                        id="flush-collapseTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample"
+                      >
+                        <div class="accordion-body">
+                          Placeholder content for this accordion, which is
+                          intended to demonstrate the
+                          <code>.accordion-flush</code> class. This is the
+                          second item's accordion body. Let's imagine this being
+                          filled with some actual content.
+                        </div>
                       </div>
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseThree"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseThree"
+                        >
                           Accordion 3
                         </button>
                       </h2>
-                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                      <div
+                        id="flush-collapseThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree"
+                        data-bs-parent="#accordionFlushExample"
+                      >
+                        <div class="accordion-body">
+                          Placeholder content for this accordion, which is
+                          intended to demonstrate the
+                          <code>.accordion-flush</code> class. This is the third
+                          item's accordion body. Nothing more exciting happening
+                          here in terms of content, but just filling up the
+                          space to make it look, at least at first glance, a bit
+                          more representative of how this would look in a
+                          real-world application.
+                        </div>
                       </div>
                     </div>
                   </div>
-                  
 
                   <h3>Toasts</h3>
                   <button
@@ -351,7 +678,7 @@
                     class="btn btn-secondary"
                     data-bs-dismiss="modal"
                   >
-                    Close
+                    Fechar
                   </button>
                 </div>
               </div>
