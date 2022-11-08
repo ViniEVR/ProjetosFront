@@ -22,10 +22,13 @@
     
     <div class="container">
 
-        <img class="responsive-img center-align logo"
+        <a href="./bootstrap.html">
+            <img
+        class="logo img-fluid"
         src="./IMG/t-systems.png"
         alt="Logo da T-systems"
       />
+        </a>
 
       <div class="row center-align">
         <div class="col s4">
@@ -36,7 +39,7 @@
             /></a>
         </div>
         <div class="col s4">
-            <a href="./index.html"><img
+            <a href="./bootstrap.html"><img
                 class="mt img-fluid logo-principal-fw"
               src="./IMG/bootstrap.png"
               alt="Logo do materialize"
@@ -79,11 +82,17 @@
                                     <a class="waves-effect waves-light btn green darken-4">button</a>
 
                                 <h5 class="sub-titulos">Inputs</h5>
-                                <div class="input-field col s12">
-                                    <input type="text" class="validate">
-                                    <label>Nome</label>
-                                </div>
-
+                                
+                                <div class="row" >
+                                    <form class="col s12">
+                                      <div class="row">
+                                        <div class="input-field col s12">
+                                          <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                          <label for="textarea1">Textarea</label>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
                                 <form action="#">
                                     <div class="file-field input-field">
                                       <div class="btn">
@@ -95,12 +104,101 @@
                                       </div>
                                     </div>
                                   </form>
+                                  <div class="row">
+                                    <form class="col s12">
+                                      <div class="row">
+                                        <div class="input-field col s6">
+                                          <i class="material-icons prefix">mode_edit</i>
+                                          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                                          <label for="icon_prefix2">First Name</label>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+
+                                  <h5 class="sub-titulos">Tooltip</h5>
+
+                                  <a class="btn tooltipped" data-position="bottom" data-tooltip="Eu sou uma tooltip!">Hover me!</a>
 
                                   
+                                  <h5 class="sub-titulos">Carousel</h5>  
 
-                                </div>
+                                  <div class="carousel carousel-slider center">
+                                    <div class="carousel-fixed-item center">
+                                    </div>
+                                    <div class="carousel-item " href="#one!">
+                                      <img src="./IMG/paisagem1.jpg" alt="" />
+                                    </div>
+                                    <div class="carousel-item " href="#two!">
+                                      <img src="./IMG/paisagem2.jpg" alt="" />
+                                    </div>
+                                    <div class="carousel-item" href="#three!">
+                                      <img src="./IMG/paisagem3.jpg" alt="" />
+                                    </div>
+                                  </div>
+
+                                  <h5 class="sub-titulos">Spinners</h5>    
+
+                                  <div class="preloader-wrapper small active">
+                                    <div class="spinner-layer spinner-blue-only">
+                                      <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                      </div><div class="gap-patch">
+                                        <div class="circle"></div>
+                                      </div><div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 
+                                  <div class="preloader-wrapper small active">
+                                    <div class="spinner-layer spinner-red-only">
+                                      <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                      </div><div class="gap-patch">
+                                        <div class="circle"></div>
+                                      </div><div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                
+                                  <div class="preloader-wrapper small active">
+                                    <div class="spinner-layer spinner-green-only">
+                                      <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                      </div><div class="gap-patch">
+                                        <div class="circle"></div>
+                                      </div><div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                      </div>
+                                    </div>
+                                  </div>
 
+
+                                  <h5 class="sub-titulos">Accordions</h5>    
+
+                                  <ul class="collapsible">
+                                    <li>
+                                      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Accordion 1</div>
+                                      <div class="collapsible-body"><span>Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Casamentiss faiz malandris se pirulitá.Si num tem leite então bota uma pinga aí cumpadi!Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.</span></div>
+                                    </li>
+                                    <li>
+                                      <div class="collapsible-header"><i class="material-icons">place</i>Accordion 2</div>
+                                      <div class="collapsible-body"><span>Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Casamentiss faiz malandris se pirulitá.Si num tem leite então bota uma pinga aí cumpadi!Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.</span></div>
+                                    </li>
+                                    <li>
+                                      <div class="collapsible-header"><i class="material-icons">whatshot</i>Accordion 3</div>
+                                      <div class="collapsible-body"><span>Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Casamentiss faiz malandris se pirulitá.Si num tem leite então bota uma pinga aí cumpadi!Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.</span></div>
+                                    </li>
+                                  </ul>
+
+
+                                  <h5 class="sub-titulos">Toast</h5>  
+                                  <a onclick="M.toast({html: 'Eu sou um toast!'})" class="btn">Toast!</a>
+
+
+                                </div>                     
                                 <div class="modal-footer">
 
                         
