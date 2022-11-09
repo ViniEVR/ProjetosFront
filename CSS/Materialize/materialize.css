@@ -8079,4 +8079,15 @@ html {
   margin-top: 50px;
 }
 
+@media screen and (min-width: 0px) and (max-width: 1500px) {
+  .card-title {
+    display: none;
+  }
+}
+@media screen and (min-width: 1500px) and (max-width: 1500px) {
+  .card-title {
+    display: block;
+  }
+}
+
 /*# sourceMappingURL=materialize.css.map */
