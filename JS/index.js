@@ -28,3 +28,13 @@ if (toastTrigger) {
     toast.show()
   })
 }
+
+$('code').each(function() {
+  var that = $(this);
+  // cache the content of 'code'
+  var html = that.html().trim();
+  that.empty();
+  // escape the content
+  that.text(html);
+});
+hljs.initHighlightingOnLoad();
